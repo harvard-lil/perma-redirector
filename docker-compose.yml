@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  redirector:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: registry.lil.tools/harvardlil/perma-redirector:0.1
+    ports:
+      - "127.0.0.1:80:8080"

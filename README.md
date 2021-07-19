@@ -12,8 +12,10 @@ Increment the image tag in `docker-compose.yml`
 Run ```docker-compose up``` to build the container (or ```docker-compose up --build``` to subsequently force a rebuild).
 
 - Visit http://localhost. You should get "400 Invalid Path".
-- Visit http://localhost/asdfasdfasdfasdfasdf. You should get "400 Invalid Path".
+- Visit http://localhost/asdf.png. You should get You should get "400 Invalid Path".
+- Visit http://localhost/asdf/asdf. You should get You should get "400 Invalid Path".
 - Visit http://localhost/asdf-asdf. You should be redirected to https://perma.cc/asdf-asdf.
+- Visit http://localhost/asdf-asdf]. You should be redirected to https://perma.cc/asdf-asdf], and then to https://perma.cc/asdf-asdf.
 
 
 Deployment

@@ -6,7 +6,7 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 
 [build]
-  image = "registry.lil.tools/harvardlil/perma-redirector:0.1"
+  image = "registry.lil.tools/harvardlil/perma-redirector:0.2"
 
 [env]
 

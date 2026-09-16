@@ -1,3 +1,14 @@
+# Historical Perma redirector
+
+Production redirects moved to Cloudflare on September 16, 2026. Both
+`custom.perma.cc` and `perma.law.harvard.edu` now redirect at the edge, with
+certificates managed by Cloudflare. Configuration and operations are in
+[lil-terraform/perma-redirector](https://github.com/harvard-lil/lil-terraform/tree/main/perma-redirector).
+
+This repository preserves the former Nginx implementation. Do not redeploy it;
+operational fixes belong in Terraform. The old Fly app still needs
+decommissioning. The instructions below are historical.
+
 A microservice to re-direct requests for [validly-formed GUIDS](https://github.com/harvard-lil/perma/blob/a1f38e4d7d254ee1efaa3b3fde9315ac4439ce31/perma_web/perma/urls.py#L17) to Perma.
 
 Why?
@@ -21,7 +32,8 @@ Run ```docker-compose up``` to build the container (or ```docker-compose up --bu
 Deployment
 ----------
 
-This microservice is currently deployed at [fly.io](https://fly.io/). I decided to have fly deploy from a built image available from the LIL registry, rather than having it re-build the image itself during deployment using the Dockerfile. To be discussed: that may be unnecessarily complicated.
+This microservice was deployed at [fly.io](https://fly.io/) from a built image
+in the LIL registry. These steps describe the retired deployment.
 
 To redeploy:
 
